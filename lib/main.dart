@@ -1,10 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, sized_box_for_whitespace
 // External imports.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // Internal imports
-import './button.dart';
+import 'buttonsline.dart';
+import 'buttoncolors.dart';
 
 void main(List<String> args) {
   runApp(Calculator());
@@ -28,7 +29,7 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 270,
+            height: 220,
           ),
           Padding(
             padding: const EdgeInsets.only(
@@ -47,22 +48,33 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Button(
-                buttonColor: Color.fromRGBO(148, 148, 148, 1.0),
-              ),
-              Button(
-                buttonColor: Color.fromRGBO(148, 148, 148, 1.0),
-              ),
-              Button(
-                buttonColor: Color.fromRGBO(148, 148, 148, 1.0),
-              ),
-              Button(
-                buttonColor: Color.fromRGBO(252, 142, 14, 1.0),
-              ),
-            ],
+          ButtonLine(
+            number: "2",
+            buttonOne: grey,
+            buttonTwo: grey,
+            buttonThree: grey,
+            buttonFour: orange,
+          ),
+          ButtonLine(
+            number: "4",
+            buttonOne: black,
+            buttonTwo: black,
+            buttonThree: black,
+            buttonFour: orange,
+          ),
+          ButtonLine(
+            number: "6",
+            buttonOne: black,
+            buttonTwo: black,
+            buttonThree: black,
+            buttonFour: orange,
+          ),
+          ButtonLine(
+            number: "8",
+            buttonOne: black,
+            buttonTwo: black,
+            buttonThree: black,
+            buttonFour: orange,
           )
         ],
       ),

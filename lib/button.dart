@@ -5,14 +5,26 @@ import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
   Color buttonColor;
+  String buttonCentre;
 
-  Button({required this.buttonColor});
+  Button({
+    required this.buttonColor,
+    required this.buttonCentre,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(shape: BoxShape.circle, color: buttonColor),
       height: 80,
       width: 80,
+      child: Center(
+          child: Text(
+        buttonCentre,
+        style: TextStyle(
+          fontSize: 28,
+          color: Colors.white,
+        ),
+      )),
     );
   }
 }
