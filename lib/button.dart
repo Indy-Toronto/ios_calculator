@@ -1,16 +1,17 @@
 // External imports
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
   Color buttonColor;
   String buttonCentre;
+  Color textColor;
 
-  Button({
-    required this.buttonColor,
-    required this.buttonCentre,
-  });
+  Button(
+      {required this.buttonColor,
+      required this.buttonCentre,
+      required this.textColor});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +23,7 @@ class Button extends StatelessWidget {
         buttonCentre,
         style: TextStyle(
           fontSize: 28,
-          color: Colors.white,
+          color: textColor,
         ),
       )),
     );

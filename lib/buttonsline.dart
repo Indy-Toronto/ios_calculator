@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, must_be_immutable
 // External imports.
 import 'package:flutter/material.dart';
 
@@ -11,14 +11,24 @@ class ButtonLine extends StatelessWidget {
   Color buttonTwo;
   Color buttonThree;
   Color buttonFour;
-  String? number;
+  String number1;
+  String number2;
+  String number3;
+  String number4;
+  Color fontColor;
 
   ButtonLine(
       {required this.buttonOne,
       required this.buttonTwo,
       required this.buttonThree,
       required this.buttonFour,
-      this.number});
+      required this.number1,
+      required this.number2,
+      required this.number3,
+      required this.number4,
+      required this.fontColor});
+
+      
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +38,23 @@ class ButtonLine extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Button(
-              buttonCentre: "AC",
+              textColor: fontColor,
+              buttonCentre: number1,
               buttonColor: buttonOne,
             ),
             Button(
-              buttonCentre: "/",
+              textColor: fontColor,
+              buttonCentre: number2,
               buttonColor: buttonTwo,
             ),
             Button(
-              buttonCentre: "%",
+              textColor: fontColor,
+              buttonCentre: number3,
               buttonColor: buttonThree,
             ),
             Button(
-              buttonCentre: "/",
+              textColor: fontColor,
+              buttonCentre: number4,
               buttonColor: buttonFour,
             ),
           ],
